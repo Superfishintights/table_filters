@@ -3,32 +3,42 @@
 <head>
     <title>My Webpage</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
-	<link href="https://cdn.jsdelivr.net/npm/slim-select@1.27.0/dist/slimselect.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/slim-select@1.27.0/dist/slimselect.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slim-select@1.26.0/dist/slimselect.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <h1>My Webpage</h1>
-		<!-- Add these hidden dropdowns in your HTML file -->
-		<select id="genderSelect" hidden></select>
-		<select id="makeSelect" hidden></select>
         <table class="table table-striped" id="myTable">
             <thead>
-				<tr>
-					<th id="headerFN">First Name</th>
-					<th id="headerLN">Last Name</th>
-					<th id="headerMake">Make</th>
-					<th id="headerModel">Model</th>
-					<th id="headerGender">Gender</th>
-				</tr>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Gender</th>
+					<th>
+						<div class="icon-wrapper">
+							<i id="filterButton" class="fas fa-filter fa-sm"></i>
+							<i id="clearFilter" class="fas fa-filter-circle-xmark fa-sm"></i>
+						</div>
+					</th>
+                </tr>
+                <tr id="filterRow" style="display: none;">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><select id="headerGender" class="filter" multiple></select></th>
+                    <th></th>
+                </tr>
+            </thead>
             <tbody>
                 <!-- Rows will be added here by JavaScript -->
             </tbody>
         </table>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/slim-select@1.26.0/dist/slimselect.min.js"></script>
     <script src="myScript.js"></script>
 </body>
 </html>

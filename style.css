@@ -1,0 +1,21 @@
+.hidden {
+    display: none;
+}
+
+/* .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
+/* .icon-wrapper #filterButton {
+    width: 18px;
+    height: 16px;
+    font-size: 14px;
+} 
+
+./* icon-wrapper #clearFilter {
+    width: 18px;
+    height: 16px;
+    font-size: 10px; /* Decrease this value to make the icon smaller */
+/* } */

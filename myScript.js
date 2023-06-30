@@ -49,10 +49,9 @@ listData = [{ "first_name": "Dun", "last_name": "McIlharga", "make": "Acura", "m
 { "first_name": "Siegfried", "last_name": "Vice", "make": "BMW", "model": "M5", "gender": "Male" },
 { "first_name": "Skelly", "last_name": "Dunthorne", "make": "Volvo", "model": "C70", "gender": "Male" }]
 
-// Function to populate the table
+// Function to populte the table
 function populateTable(data) {
     var table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
-    // clear the table first
     table.innerHTML = "";
     data.forEach(function (item) {
         var row = table.insertRow(-1);
@@ -117,7 +116,6 @@ function filterData() {
         var filteredData = listData.filter(item => selectedGenders.includes(item.gender));
         populateTable(filteredData);
     } else {
-        // If no genders are selected, show all data
         populateTable(listData);
     }
 }
